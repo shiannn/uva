@@ -14,7 +14,8 @@ int main(){
             while(j<len2&&str2[j]!=str1[i]){
                 j++;
             }
-            if(j==len2)break; 
+            if(j==len2)break;
+            if(i!=len1-1)j++;
         }
         if(j==len2){
             printf("No\n");
