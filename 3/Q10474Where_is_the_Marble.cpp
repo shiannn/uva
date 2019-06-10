@@ -1,14 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define max_marble 10001
+#define max_marble 10005
 //#define debug
 
 int marble[max_marble];
  
 int main(){
     int N,Q;
+    int count=1;
     while(scanf("%d %d",&N,&Q)!=EOF){
+        memset(marble,0,sizeof(marble));
         if(N==0&&Q==0)break;
         int max=0;
         for(int i=0;i<N;i++){
@@ -33,9 +35,9 @@ for(int i=0;i<=max;i++){
 printf("countingsort end\n");
 #endif
         //answer Q
+        printf("CASE# %d:\n",count);
         int question;
         for(int i=0;i<Q;i++){
-            printf("CASE# %d:\n",i+1);
             scanf("%d",&question);
             if(question==0){
                 if(marble[question]==0)printf("0 not found\n");
@@ -50,6 +52,6 @@ printf("countingsort end\n");
                 }
             }
         }
-        memset(marble,0,4*max);
+        count++;
     }
 }
