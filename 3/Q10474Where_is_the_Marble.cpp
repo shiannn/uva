@@ -43,6 +43,7 @@ printf("countingsort end\n");
                 if(marble[question]==0)printf("0 not found\n");
                 else printf("0 found at 1\n");
             }
+            if(question>max)printf("%d not found\n",question);
             else{ 
                 if(marble[question]==marble[question-1]){
                     printf("%d not found\n",question); 
